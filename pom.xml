@@ -94,6 +94,7 @@
         <module>awaitility-scala</module>
         <module>awaitility-groovy</module>
         <module>awaitility-test-support</module>
+        <module>awaitility-cdi</module>
     </modules>
 
     <build>
