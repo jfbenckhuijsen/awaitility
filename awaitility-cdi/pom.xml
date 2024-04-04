@@ -26,6 +26,12 @@
             <artifactId>microprofile-context-propagation-api</artifactId>
             <version>${microprofile-context-propagation-api.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.2</version>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
 </project>

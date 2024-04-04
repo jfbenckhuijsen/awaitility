@@ -11,24 +11,12 @@ import java.util.concurrent.ExecutorService;
  */
 public class AwaitilityCdi {
 
-    private static ExecutorService executorService;
-
-
     /**
      * Setup Awaitility to integrate with CDI and Microprofile Context propagation
      */
     public static void setup() {
-        executorService = ManagedExecutor.builder().propagated(ThreadContext.CDI).build();
+        ExecutorService executorService = ManagedExecutor.builder().propagated(ThreadContext.CDI).build();
         Awaitility.pollExecutorService(executorService);
-    }
-
-    /**
-     * Teardown the executor service
-     */
-    public static void tearDown() {
-        if (executorService != null) {
-            executorService.close();
-        }
     }
 
 }
